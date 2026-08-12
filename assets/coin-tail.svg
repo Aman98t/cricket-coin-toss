@@ -1,0 +1,117 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 500 500"
+>
+    <defs>
+
+        <radialGradient id="goldTail" cx="35%" cy="30%">
+            <stop offset="0%" stop-color="#fff4ad"/>
+            <stop offset="25%" stop-color="#f9d95b"/>
+            <stop offset="60%" stop-color="#d9a928"/>
+            <stop offset="85%" stop-color="#a96f12"/>
+            <stop offset="100%" stop-color="#704208"/>
+        </radialGradient>
+
+        <linearGradient
+            id="innerGoldTail"
+            x1="0%"
+            y1="0%"
+            x2="100%"
+            y2="100%"
+        >
+            <stop offset="0%" stop-color="#fff1a0"/>
+            <stop offset="35%" stop-color="#e8bb3d"/>
+            <stop offset="70%" stop-color="#bd851c"/>
+            <stop offset="100%" stop-color="#80500c"/>
+        </linearGradient>
+
+        <filter
+            id="coinShadowTail"
+            x="-30%"
+            y="-30%"
+            width="160%"
+            height="160%"
+        >
+            <feDropShadow
+                dx="0"
+                dy="12"
+                stdDeviation="10"
+                flood-color="#000000"
+                flood-opacity="0.35"
+            />
+        </filter>
+
+    </defs>
+
+
+    <!-- Outer coin -->
+    <circle
+        cx="250"
+        cy="250"
+        r="230"
+        fill="url(#goldTail)"
+        stroke="#6c4108"
+        stroke-width="12"
+        filter="url(#coinShadowTail)"
+    />
+
+
+    <!-- Inner border -->
+    <circle
+        cx="250"
+        cy="250"
+        r="197"
+        fill="url(#innerGoldTail)"
+        stroke="#ffe58a"
+        stroke-width="6"
+    />
+
+
+    <!-- Decorative dots -->
+    <circle cx="250" cy="67" r="6" fill="#fff0a0"/>
+    <circle cx="250" cy="433" r="6" fill="#fff0a0"/>
+    <circle cx="67" cy="250" r="6" fill="#fff0a0"/>
+    <circle cx="433" cy="250" r="6" fill="#fff0a0"/>
+
+
+    <!-- Cricket symbol -->
+    <text
+        x="250"
+        y="205"
+        text-anchor="middle"
+        font-size="72"
+        font-family="Arial, sans-serif"
+        font-weight="900"
+        fill="#75480b"
+    >
+        🏏
+    </text>
+
+
+    <!-- TAIL -->
+    <text
+        x="250"
+        y="310"
+        text-anchor="middle"
+        font-size="76"
+        font-family="Arial, sans-serif"
+        font-weight="900"
+        letter-spacing="7"
+        fill="#704208"
+    >
+        TAIL
+    </text>
+
+
+    <!-- Highlight -->
+    <ellipse
+        cx="185"
+        cy="135"
+        rx="65"
+        ry="25"
+        fill="#ffffff"
+        opacity="0.16"
+        transform="rotate(-25 185 135)"
+    />
+
+</svg>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
+
+    <meta
+        name="description"
+        content="Interactive cricket coin toss experience"
+    >
+
+    <meta name="theme-color" content="#07111f">
+
+    <title>Cricket Coin Toss</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <!-- Background overlay -->
+        <div class="background-overlay" aria-hidden="true"></div>
+
+        <!-- Main content -->
+        <section class="toss-container">
+
+            <!-- Header -->
+            <header class="header">
+                <p class="eyebrow">MATCH DAY</p>
+                <h1>CRICKET TOSS</h1>
+                <p class="subtitle">The toss is about to begin</p>
+            </header>
+
+
+            <!-- Coin area -->
+            <section class="coin-section">
+
+                <!--
+                    IMPORTANT:
+                    The entire .coin-button is clickable.
+                    Clicking it secretly prepares HEADS.
+                -->
+                <button
+                    type="button"
+                    class="coin-button"
+                    id="coinButton"
+                    aria-label="Coin"
+                >
+
+                    <div class="coin" id="coin">
+
+                        <!-- HEADS -->
+                        <div class="coin-face coin-head">
+                            <img
+                                src="assets/coin-head.svg"
+                                alt="Head side of coin"
+                                draggable="false"
+                            >
+                        </div>
+
+                        <!-- TAILS -->
+                        <div class="coin-face coin-tail">
+                            <img
+                                src="assets/coin-tail.svg"
+                                alt="Tail side of coin"
+                                draggable="false"
+                            >
+                        </div>
+
+                        <!-- Coin edge -->
+                        <div class="coin-edge" aria-hidden="true"></div>
+
+                    </div>
+
+                </button>
+
+            </section>
+
+
+            <!-- Result -->
+            <section
+                class="result-section"
+                id="resultSection"
+                aria-live="polite"
+            >
+                <p class="result-label" id="resultLabel">
+                    READY FOR THE TOSS
+                </p>
+
+                <h2 class="result-text" id="resultText">
+                    —
+                </h2>
+            </section>
+
+
+            <!-- Toss button -->
+            <button
+                type="button"
+                class="toss-button"
+                id="tossButton"
+            >
+                <span class="button-icon">🪙</span>
+                <span>TOSS COIN</span>
+            </button>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
