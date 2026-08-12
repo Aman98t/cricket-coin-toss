@@ -1,117 +1,147 @@
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 500 500"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+<defs>
+  <radialGradient id="g" cx="30%" cy="25%" r="75%">
+    <stop offset="0" stop-color="#fff7bd"/>
+    <stop offset=".25" stop-color="#f8dc68"/>
+    <stop offset=".58" stop-color="#d8aa32"/>
+    <stop offset=".82" stop-color="#ae7417"/>
+    <stop offset="1" stop-color="#704207"/>
+  </radialGradient>
+
+  <radialGradient id="inner" cx="35%" cy="30%" r="70%">
+    <stop offset="0" stop-color="#ffe995"/>
+    <stop offset=".5" stop-color="#e4b63a"/>
+    <stop offset="1" stop-color="#99620e"/>
+  </radialGradient>
+
+  <linearGradient id="txt" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#5b3505"/>
+    <stop offset=".5" stop-color="#8b5709"/>
+    <stop offset="1" stop-color="#4a2903"/>
+  </linearGradient>
+</defs>
+
+<!-- Outer coin -->
+<circle
+  cx="250"
+  cy="250"
+  r="232"
+  fill="url(#g)"
+  stroke="#674006"
+  stroke-width="12"
+/>
+
+<!-- Inner rim -->
+<circle
+  cx="250"
+  cy="250"
+  r="204"
+  fill="none"
+  stroke="#ffe58a"
+  stroke-width="5"
+/>
+
+<circle
+  cx="250"
+  cy="250"
+  r="190"
+  fill="url(#inner)"
+  stroke="#9b6512"
+  stroke-width="3"
+/>
+
+<!-- Decorative ring -->
+<circle
+  cx="250"
+  cy="250"
+  r="172"
+  fill="none"
+  stroke="#f8d96b"
+  stroke-width="3"
+  stroke-dasharray="3 11"
+/>
+
+<!-- Crossed cricket bats -->
+<g
+  fill="none"
+  stroke="#704207"
+  stroke-width="13"
+  stroke-linecap="round"
+  stroke-linejoin="round"
 >
-    <defs>
+  <path d="M190 145 L292 270"/>
+  <path d="M310 145 L208 270"/>
+</g>
 
-        <radialGradient id="goldTail" cx="35%" cy="30%">
-            <stop offset="0%" stop-color="#fff4ad"/>
-            <stop offset="25%" stop-color="#f9d95b"/>
-            <stop offset="60%" stop-color="#d9a928"/>
-            <stop offset="85%" stop-color="#a96f12"/>
-            <stop offset="100%" stop-color="#704208"/>
-        </radialGradient>
+<g
+  fill="none"
+  stroke="#f5d66c"
+  stroke-width="4"
+  stroke-linecap="round"
+>
+  <path d="M190 145 L292 270"/>
+  <path d="M310 145 L208 270"/>
+</g>
 
-        <linearGradient
-            id="innerGoldTail"
-            x1="0%"
-            y1="0%"
-            x2="100%"
-            y2="100%"
-        >
-            <stop offset="0%" stop-color="#fff1a0"/>
-            <stop offset="35%" stop-color="#e8bb3d"/>
-            <stop offset="70%" stop-color="#bd851c"/>
-            <stop offset="100%" stop-color="#80500c"/>
-        </linearGradient>
+<!-- Cricket ball -->
+<circle
+  cx="250"
+  cy="205"
+  r="34"
+  fill="#8b5709"
+  stroke="#704207"
+  stroke-width="7"
+/>
 
-        <filter
-            id="coinShadowTail"
-            x="-30%"
-            y="-30%"
-            width="160%"
-            height="160%"
-        >
-            <feDropShadow
-                dx="0"
-                dy="12"
-                stdDeviation="10"
-                flood-color="#000000"
-                flood-opacity="0.35"
-            />
-        </filter>
+<!-- Ball seam -->
+<path
+  d="M228 181 C250 194 250 216 272 229"
+  fill="none"
+  stroke="#f4d46a"
+  stroke-width="4"
+/>
 
-    </defs>
+<path
+  d="
+    M235 185l-5 7
+    M243 191l-5 7
+    M251 198l-5 7
+    M259 207l-5 7
+    M267 216l-5 7
+  "
+  stroke="#f4d46a"
+  stroke-width="3"
+/>
 
+<!-- TAIL -->
+<text
+  x="250"
+  y="345"
+  text-anchor="middle"
+  font-family="Arial, Helvetica, sans-serif"
+  font-size="78"
+  font-weight="900"
+  letter-spacing="8"
+  fill="url(#txt)"
+>
+  TAIL
+</text>
 
-    <!-- Outer coin -->
-    <circle
-        cx="250"
-        cy="250"
-        r="230"
-        fill="url(#goldTail)"
-        stroke="#6c4108"
-        stroke-width="12"
-        filter="url(#coinShadowTail)"
-    />
+<!-- Decorative dots -->
+<circle cx="250" cy="105" r="5" fill="#754707"/>
+<circle cx="250" cy="395" r="5" fill="#754707"/>
+<circle cx="105" cy="250" r="5" fill="#754707"/>
+<circle cx="395" cy="250" r="5" fill="#754707"/>
 
-
-    <!-- Inner border -->
-    <circle
-        cx="250"
-        cy="250"
-        r="197"
-        fill="url(#innerGoldTail)"
-        stroke="#ffe58a"
-        stroke-width="6"
-    />
-
-
-    <!-- Decorative dots -->
-    <circle cx="250" cy="67" r="6" fill="#fff0a0"/>
-    <circle cx="250" cy="433" r="6" fill="#fff0a0"/>
-    <circle cx="67" cy="250" r="6" fill="#fff0a0"/>
-    <circle cx="433" cy="250" r="6" fill="#fff0a0"/>
-
-
-    <!-- Cricket symbol -->
-    <text
-        x="250"
-        y="205"
-        text-anchor="middle"
-        font-size="72"
-        font-family="Arial, sans-serif"
-        font-weight="900"
-        fill="#75480b"
-    >
-        🏏
-    </text>
-
-
-    <!-- TAIL -->
-    <text
-        x="250"
-        y="310"
-        text-anchor="middle"
-        font-size="76"
-        font-family="Arial, sans-serif"
-        font-weight="900"
-        letter-spacing="7"
-        fill="#704208"
-    >
-        TAIL
-    </text>
-
-
-    <!-- Highlight -->
-    <ellipse
-        cx="185"
-        cy="135"
-        rx="65"
-        ry="25"
-        fill="#ffffff"
-        opacity="0.16"
-        transform="rotate(-25 185 135)"
-    />
+<!-- Highlight -->
+<ellipse
+  cx="185"
+  cy="130"
+  rx="68"
+  ry="23"
+  fill="#fff"
+  opacity=".16"
+  transform="rotate(-25 185 130)"
+/>
 
 </svg>

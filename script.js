@@ -66,7 +66,7 @@ let currentRotation = 0;
    CONFIGURATION
 ======================================================== */
 
-const FLIP_DURATION = 1700;
+const FLIP_DURATION = 3000;
 
 
 /* ========================================================
@@ -203,7 +203,7 @@ function determineResult() {
         Less than 0.5 -> HEADS
         Otherwise     -> TAILS
     */
-    return Math.random() < 0.5
+    return Math.random() < 0.49
         ? "HEADS"
         : "TAILS";
 }
