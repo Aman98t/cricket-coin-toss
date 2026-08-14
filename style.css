@@ -53,7 +53,7 @@ body {
             rgba(2, 8, 18, 0.18),
             rgba(2, 8, 18, 0.58)
         ),
-        url("assets/background.png");
+        url("assets/background.jpg");
 
     background-position: center center;
     background-repeat: no-repeat;
@@ -618,5 +618,56 @@ body {
 
     .result-text {
         transition: none;
+    }
+}
+/* =========================================================
+TOSS STATS
+========================================================= */
+.toss-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 28px;
+    padding: 12px 24px;
+    
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.stat-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+}
+
+.stat-value {
+    font-size: 1.4rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    opacity: 0.6;
+}
+
+/* Phone screens ke liye thoda adjust */
+@media (max-width: 599px) {
+    .toss-stats {
+        gap: 16px;
+        padding: 10px 16px;
+        margin-top: 20px;
+    }
+    .stat-value {
+        font-size: 1.2rem;
     }
 }

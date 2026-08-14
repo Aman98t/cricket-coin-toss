@@ -31,7 +31,9 @@ const tossButton = document.getElementById("tossButton");
 
 const resultText = document.getElementById("resultText");
 const resultLabel = document.getElementById("resultLabel");
-
+const statTotal = document.getElementById("statTotal");
+const statHeads = document.getElementById("statHeads");
+const statTails = document.getElementById("statTails");
 
 
 /* ========================================================
@@ -458,7 +460,20 @@ function finishToss(result, targetRotation) {
         Display result.
     */
     showResult(result);
-
+    /* --- NAYA CODE: STATS UPDATE KAREIN --- */
+    stats.total += 1;
+    if (result === "HEADS") {
+        stats.heads += 1;
+    } else {
+        stats.tails += 1;
+    }
+    
+    // Browser storage mein save karein
+    localStorage.setItem("cricketTossStats", JSON.stringify(stats));
+    
+    // Screen par naye numbers update karein
+    updateStatsUI();
+    /* -------------------------------------- */
 
     /*
         Re-enable controls.
@@ -516,4 +531,22 @@ function hideResult() {
     resultText.textContent = "—";
 }
 
+
+/* ========================================================
+   STATS TRACKING
+======================================================== */
+let stats = JSON.parse(localStorage.getItem("cricketTossStats")) || {
+    total: 0,
+    heads: 0,
+    tails: 0
+};
+
+// Page load hote hi purane stats UI par dikhayein
+updateStatsUI();
+
+function updateStatsUI() {
+    statTotal.textContent = stats.total;
+    statHeads.textContent = stats.heads;
+    statTails.textContent = stats.tails;
+}
 
