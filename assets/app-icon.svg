@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <defs>
+        <!-- App Icon Background Glow -->
+        <radialGradient id="bgGlow" cx="50%" cy="50%" r="70%">
+            <stop offset="0%" stop-color="#142c4c"/>
+            <stop offset="100%" stop-color="#07111f"/>
+        </radialGradient>
+
+        <!-- Golden Coin Gradient -->
+        <radialGradient id="goldGrad" cx="30%" cy="30%" r="70%">
+            <stop offset="0%" stop-color="#fff7bd"/>
+            <stop offset="30%" stop-color="#f8dc68"/>
+            <stop offset="65%" stop-color="#d8aa32"/>
+            <stop offset="100%" stop-color="#704207"/>
+        </radialGradient>
+    </defs>
+
+    <!-- App Background -->
+    <rect width="512" height="512" fill="url(#bgGlow)"/>
+
+    <!-- Outer Coin -->
+    <circle cx="256" cy="256" r="160" fill="url(#goldGrad)" stroke="#674006" stroke-width="12"/>
+    
+    <!-- Inner Rim -->
+    <circle cx="256" cy="256" r="140" fill="none" stroke="#ffe58a" stroke-width="5" opacity="0.9"/>
+    
+    <!-- Decorative Ring -->
+    <circle cx="256" cy="256" r="120" fill="none" stroke="#f8d96b" stroke-width="3" stroke-dasharray="6 12" opacity="0.8"/>
+
+    <!-- TOSS Text in Center -->
+    <text x="256" y="280" font-family="Arial, sans-serif" font-weight="900" font-size="76" fill="#6b3c05" text-anchor="middle" letter-spacing="4">TOSS</text>
+</svg>
